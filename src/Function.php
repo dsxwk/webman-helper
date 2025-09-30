@@ -8,6 +8,7 @@ use Dsxwk\Framework\Utils\Exception\CodeException;
 use Dsxwk\Framework\Utils\Query\Handle;
 use Dsxwk\Framework\Utils\Trace\Trace;
 use Dsxwk\Framework\WebmanHelper\Validate\Think\BaseRequest;
+use support\Container;
 use support\Response;
 
 // 公共函数
@@ -122,5 +123,20 @@ if (!function_exists('validated')) {
         }
 
         return $result;
+    }
+
+    if (!function_exists('make')) {
+        /**
+         * 从容器解析类（支持 IDE 智能提示）
+         *
+         * @template T
+         * @param class-string<T> $abstract
+         * @param array $parameters
+         * @return T
+         */
+        function make(string $abstract, array $parameters = [])
+        {
+            return Container::make($abstract, $parameters);
+        }
     }
 }
