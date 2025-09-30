@@ -27,18 +27,5 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5"
-    },
-    "extra": {
-        "command-config": {
-            "path": "config/plugin/webman/console/command.php"
-        }
-    },
-    "scripts": {
-        "post-package-install": [
-            "Dsxwk\\Framework\\WebmanHelper\\Installer::install"
-        ],
-        "post-package-update": [
-            "Dsxwk\\Framework\\WebmanHelper\\Installer::install"
-        ]
     }
 }
