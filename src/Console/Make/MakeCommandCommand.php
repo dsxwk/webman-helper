@@ -107,7 +107,7 @@ declare(strict_types=1);
 
 namespace $namespace;
 
-use Dsxwk\Framework\Webman\Console\BaseCommand;
+use Dsxwk\Framework\WebmanHelper\Console\BaseCommand;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;

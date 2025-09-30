@@ -98,7 +98,7 @@ declare(strict_types=1);
 
 namespace $namespace;
 
-use Dsxwk\Framework\Webman\Validate\Think\BaseRequest;
+use Dsxwk\Framework\WebmanHelper\Validate\Think\BaseRequest;
 
 class $name extends BaseRequest
 {

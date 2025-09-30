@@ -244,7 +244,7 @@ declare(strict_types=1);
 
 namespace $namespace;
 
-use Dsxwk\Framework\Laravel\Model\BaseModel;
+use Dsxwk\Framework\LaravelHelper\Model\BaseModel;
 
 /**
 $properties

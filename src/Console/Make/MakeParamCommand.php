@@ -120,7 +120,7 @@ declare(strict_types=1);
 
 namespace $namespace;
 
-use Dsxwk\Framework\Param\BaseParam;
+use Dsxwk\Framework\Utils\Param\BaseParam;
 
 class $name extends BaseParam
 {
