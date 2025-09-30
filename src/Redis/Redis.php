@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dsxwk\Framework\WebmanHelper\Redis;
 
-use Dsxwk\Framework\Query\Handle;
+use Dsxwk\Framework\Utils\Query\Handle;
 use support\Redis AS Predis;
 
 class Redis extends Predis
