@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-use Dsxwk\Framework\Annotations\Enums\ErrCodeEnum;
-use Dsxwk\Framework\Annotations\Enums\Interface\ErrCodeInterface;
+use Dsxwk\Framework\Annotation\Enums\ErrCodeEnum;
+use Dsxwk\Framework\Annotation\Enums\Interface\ErrCodeInterface;
 use Dsxwk\Framework\Utils\Exception\CodeException;
 use Dsxwk\Framework\Utils\Query\Handle;
 use Dsxwk\Framework\Utils\Trace\Trace;
-use Dsxwk\Framework\Webman\Validate\Think\BaseRequest;
+use Dsxwk\Framework\WebmanHelper\Validate\Think\BaseRequest;
 use support\Response;
 
 // 公共函数
