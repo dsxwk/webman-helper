@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Dsxwk\Framework\WebmanHelper\Console\Make;
 
+use Dsxwk\Framework\LaravelHelper\Orm\Db;
 use Dsxwk\Framework\WebmanHelper\Console\BaseCommand;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -73,7 +74,7 @@ class MakeParamCommand extends BaseCommand
         $properties = '';
         $format     = '    ';
         // MySQL 列信息
-        foreach ($this->db::connection()->select(
+        foreach (Db::connection()->select(
             "select COLUMN_NAME,DATA_TYPE,COLUMN_KEY,COLUMN_COMMENT from INFORMATION_SCHEMA.COLUMNS where table_name = '$table' and table_schema = '$database' ORDER BY ordinal_position"
         ) as $item) {
             if ($item->COLUMN_KEY !== 'PRI') {
