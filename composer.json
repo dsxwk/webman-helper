@@ -23,7 +23,8 @@
         "webman/redis": "^2.1",
         "symfony/console": "^7.3",
         "webman/console": "^2.1",
-        "dsxwk/tp-helper": "^1.0"
+        "dsxwk/tp-helper": "^1.0",
+        "dsxwk/laravel-helper": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5"

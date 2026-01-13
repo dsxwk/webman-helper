@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Dsxwk\Framework\WebmanHelper\Console\Make;
 
+use Dsxwk\Framework\LaravelHelper\Orm\Db;
 use Dsxwk\Framework\WebmanHelper\Console\BaseCommand;
 use Doctrine\Inflector\InflectorFactory;
 use Symfony\Component\Console\Attribute\AsCommand;
@@ -127,7 +128,7 @@ class MakeModelCommand extends BaseCommand
             $driver      = config("database.connections.$connection.driver") ?? 'mysql';
             $inflector   = InflectorFactory::create()->build();
             $table_plura = $inflector->pluralize($inflector->tableize($class));
-            $con         = $this->db->connection();
+            $con         = Db::connection();
 
             // 检查表是否存在（兼容MySQL和PostgreSQL）
             if ($driver === 'pgsql') {
